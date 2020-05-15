@@ -1,6 +1,6 @@
 {
   "name": "emby",
-  "url": "https://github.com/jkeljo/hassio-addons/blob/master/ozwcp",
+  "url": "https://github.com/haberda/hassio_addons",
   "version": "1",
   "slug": "emby",
   "ingress": true,
@@ -21,7 +21,7 @@
     "ssl"
   ],
   "ports": {
-    "8096/tcp": null,
+    "8096/tcp": 8096,
     "8920/tcp": 8920,
     "7359/udp": 7359,
     "1900/udp": 1900

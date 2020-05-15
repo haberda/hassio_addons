@@ -1,0 +1,18 @@
+#!/usr/bin/with-contenv sh
+
+APP_DIR=/
+
+if [ $(ls -nd /share/.config/emby | tr -s '[:space:]' | cut -d' ' -f3) -ne $UID ] || [ $(ls -nd /share/.config/emby | tr -s '[:space:]' | cut -d' ' -f4) -ne $GID ]; then
+  chown $UID:$GID -R /share/.config/emby
+fi
+
+cd $APP_DIR
+
+s6-applyuidgid -U system/EmbyServer \
+    -programdata /share/.config/emby \
+    -ffdetect /bin/ffdetect \
+    -ffmpeg /bin/ffmpeg \
+    -ffprobe /bin/ffprobe \
+    -restartexitcode 3
+
+# vim: ts=2 sw=2 et:

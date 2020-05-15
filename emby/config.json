@@ -3,7 +3,7 @@
   "url": "https://github.com/haberda/hassio_addons",
   "version": "1",
   "slug": "emby",
-  "ingress": true,
+  "ingress": false,
   "ingress_port": 8096,
   "arch": [
     "aarch64",

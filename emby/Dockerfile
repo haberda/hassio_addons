@@ -43,6 +43,8 @@ RUN export LANG=C.UTF-8 && \
 
 COPY run.sh /usr/bin/
 
+RUN ["chmod", "+x", "/usr/bin/run.sh"]
+
 EXPOSE 8096 8920 7359/udp 1900/udp
 
 HEALTHCHECK --interval=60s --timeout=15s --start-period=90s \

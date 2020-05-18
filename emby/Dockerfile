@@ -2,7 +2,7 @@ FROM emby/embyserver
 MAINTAINER Daniel Haber
 
 # Create config folders
-RUN ["mkdir", "-p", "/share/.config/emby"]
+#RUN ["mkdir", "-p", "/share/.config/emby"]
 
 COPY run /etc/services.d/emby-server
 

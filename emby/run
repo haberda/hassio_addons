@@ -1,5 +1,7 @@
 #!/usr/bin/with-contenv sh
 
+mkdir -p /share/.config/emby
+
 APP_DIR=/
 
 if [ $(ls -nd /share/.config/emby | tr -s '[:space:]' | cut -d' ' -f3) -ne $UID ] || [ $(ls -nd /share/.config/emby | tr -s '[:space:]' | cut -d' ' -f4) -ne $GID ]; then

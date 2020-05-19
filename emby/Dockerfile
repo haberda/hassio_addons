@@ -1,11 +1,7 @@
-FROM emby/embyserver
-MAINTAINER Daniel Haber
+ARG BUILD_FROM=emby/embyserver
 
-# Create config folders
-#RUN ["mkdir", "-p", "/share/.config/emby"]
+FROM ${BUILD_FROM}
 
-COPY run /etc/services.d/emby-server
+RUN sed -i "s|config|data|g" /etc/services.d/emby-server/run
 
-RUN ["chmod", "+x", "/etc/services.d/emby-server/run"]
-
-VOLUME ["/share", "/ssl"]
+VOLUME ["/share", "/ssl", "/data"]

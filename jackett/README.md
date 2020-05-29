@@ -1,6 +1,6 @@
 [![](logo.png)](https://github.com/Jackett/Jackett)
 
-# Nextcloud
+# Jackett
 
 Jackett Home Assistant add-on
 

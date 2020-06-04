@@ -1,4 +1,4 @@
-ARG BUILD_FROM=emby/embyserver
+ARG BUILD_FROM
 
 FROM ${BUILD_FROM}
 

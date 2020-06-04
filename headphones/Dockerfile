@@ -1,7 +1,9 @@
-FROM linuxserver/headphones
+ARG BUILD_FROM
 
-ENV XDG_DATA_HOME="/data" \
-XDG_CONFIG_HOME="/data"
+FROM ${BUILD_FROM}
+
+# ENV XDG_DATA_HOME="/data" \
+# XDG_CONFIG_HOME="/data"
 
 # modify/copy files
 

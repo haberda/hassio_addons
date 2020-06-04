@@ -3,8 +3,8 @@
     "build_from": {
         "aarch64": "linuxserver/headphones:arm64v8-latest",
         "amd64": "linuxserver/headphones",
-        "armhf": "linuxserver/headphones_arm32v7-latest",
-        "armv7": "linuxserver/headphones_arm32v7-latest"
+        "armhf": "linuxserver/headphones:arm32v7-latest",
+        "armv7": "linuxserver/headphones:arm32v7-latest"
     },
     "args": {}
 }

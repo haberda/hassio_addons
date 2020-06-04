@@ -1,4 +1,6 @@
-FROM linuxserver/jackett
+ARG BUILD_FROM
+
+FROM ${BUILD_FROM}
 
 ENV XDG_DATA_HOME="/data" \
 XDG_CONFIG_HOME="/data"

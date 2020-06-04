@@ -1,4 +1,6 @@
-FROM linuxserver/nextcloud
+ARG BUILD_FROM
+
+FROM ${BUILD_FROM}
 
 ENV NEXTCLOUD_PATH="/data/config/www/nextcloud"
 
@@ -10,10 +12,6 @@ RUN sed -i "s|config|data/config|g" /etc/cont-init.d/*
 RUN sed -i "s|data|share/nextcloud|g" /etc/services.d/nginx/*
 
 RUN sed -i "s|config|data/config|g" /etc/services.d/nginx/*
-
-#RUN sed -i "s|data|share/nextcloud|g" /defaults/*
-
-#RUN sed -i "s|config|data/config|g" /defaults/*
 
 COPY root/ /
 

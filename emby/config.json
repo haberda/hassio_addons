@@ -1,7 +1,7 @@
 {
   "name": "emby",
   "url": "https://github.com/haberda/hassio_addons",
-  "version": "0.4",
+  "version": "0.5",
   "slug": "emby",
   "ingress": false,
   "ingress_port": 8096,
@@ -29,9 +29,5 @@
   },
   "schema": {
   },
-  "webui": "http://[HOST]:[PORT:8096]",
-  "hassio_api": true,
-  "hassio_role": "default",
-  "homeassistant_api": false,
-  "host_network": false
+  "webui": "http://[HOST]:[PORT:8096]"
 }

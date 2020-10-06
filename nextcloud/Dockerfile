@@ -17,4 +17,4 @@ COPY root/ /
 
 RUN ["chmod", "+x", "/defaults/nextcloud-perms.sh"]
 
-VOLUME ["/share", "/ssl", "/data"]
+VOLUME ["/share", "/ssl", "/data", "/media"]

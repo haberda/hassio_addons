@@ -1,7 +1,7 @@
 {
   "name": "Nextcloud",
   "url": "https://github.com/haberda/hassio_addons",
-  "version": "0.03",
+  "version": "0.04",
   "slug": "nextcloud",
   "ingress": false,
   "ingress_port": 0,
@@ -16,6 +16,7 @@
   "auto_uart": true,
   "map": [
     "share:rw",
+    "media:rw",
     "ssl:rw"
   ],
   "options":{

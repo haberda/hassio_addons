@@ -4,4 +4,4 @@ FROM ${BUILD_FROM}
 
 RUN sed -i "s|config|data|g" /etc/services.d/emby-server/run
 
-VOLUME ["/share", "/ssl", "/data"]
+VOLUME ["/share", "/ssl", "/data", "/media"]

@@ -9,4 +9,4 @@ XDG_CONFIG_HOME="/data"
 
 RUN sed -i "s|config|data|g" /etc/cont-init.d/*
 
-VOLUME ["/share", "/ssl", "/data"]
+VOLUME ["/share", "/ssl", "/data", "/media"]

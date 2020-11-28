@@ -13,4 +13,4 @@ RUN sed -i "s|config|data|g" /etc/services.d/headphones/*
 
 COPY root/ /
 
-VOLUME ["/share", "/ssl", "/data"]
+VOLUME ["/share", "/ssl", "/data", "/media"]

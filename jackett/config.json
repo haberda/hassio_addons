@@ -16,6 +16,7 @@
   "auto_uart": true,
   "map": [
     "share:rw",
+    "media:rw",
     "ssl"
   ],
   "options":{

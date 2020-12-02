@@ -11,4 +11,6 @@ RUN sed -i "s|config|data|g" /etc/cont-init.d/*
 
 RUN sed -i "s|config|data|g" /etc/services.d/sickchill/*
 
+RUN rm -r /media
+
 VOLUME ["/share", "/ssl", "/data", "/media"]

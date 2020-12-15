@@ -1,8 +1,8 @@
 [![](logo.png)](https://www.signal.org/)
 
-# Signal Messenger CLI
+# Signal Messenger
 
-Signal-cli Home Assistant add-on
+Signal-CLI to Rest-API Home Assistant add-on
 
 # How to use this add-on
 

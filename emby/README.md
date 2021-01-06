@@ -1,20 +1,18 @@
-[![logo](https://raw.githubusercontent.com/dperson/emby/master/logo.png)](http://emby.media/)
+[![](https://github.com/haberda/hassio_addons/blob/master/emby/logo.png)](http://emby.media/)
 
 # Emby
 
-Emby docker container
+An Emby Mediaserver Home Assistant add-on.
 
 # What is Emby?
 
-Emby Server automatically streams (and converts, if needed) your media
+Emby Mediaserver automatically streams (and transcodes, if needed) your media
 on-the-fly to play on any device.
 
-# How to use this image
+# How to use this add-on
 
-When started the emby web inteface will listen on port 8096 in the container.
+When started the emby web inteface will listen on port 8096 in the container and 8096 by default on the host.
 
-## Hosting a Emby instance
+Place your media in /share. The config files are stored in the /data folder and will be backed up with a shapshot. You can migrate an existing instance of emby by copying the config to the add-on data folder if you have access, or you can use emby's built in config backup/restore feature.
 
-Start the add-on, resourceses will be avaliable in /share. The config files are stored in the /share/.config/emby folder. Your media should reside in the /share folder somewhere. You can migrate an existing instance of emby by copying the config to the above folder and rebuilding your library. You should retain all watched/unwatched data.
-
-Dockerfile modifled from: David Personette https://github.com/dperson to work with hassio. Have fun.
+Based on emby/embyserver docker image

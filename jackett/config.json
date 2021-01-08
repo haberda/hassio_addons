@@ -1,7 +1,7 @@
 {
   "name": "Jackett",
   "url": "https://github.com/haberda/hassio_addons",
-  "version": "0.04",
+  "version": "0.4",
   "slug": "jackett",
   "ingress": false,
   "ingress_port": 9117,

@@ -29,4 +29,4 @@ Warning: overwriting the domain you are currently using will make Nextcloud inac
 
 Where the number 2 is the now new third domain position in the config file, and 'my.domain.com' is your domain. Type the first command again to see whether the new domain has indeed been added. If it has, you are done!
 
-Based on the linuxserver image
+Based on the [linuxserver](https://hub.docker.com/r/linuxserver/nextcloud) image

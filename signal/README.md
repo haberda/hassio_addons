@@ -17,4 +17,4 @@ Then proceed here:
 https://www.home-assistant.io/integrations/signal_messenger/
 
 
-All credit to bbernhard, all I did was take his work and make an add-on.
+All credit to [@bbernhard](https://github.com/bbernhard), all I did was take his [work](https://github.com/bbernhard/signal-cli-rest-api) and make an add-on.

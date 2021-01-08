@@ -1,6 +1,6 @@
 FROM bbernhard/signal-cli-rest-api:0.31
 
-RUN mkdir -p /data/data
+WORKDIR /data/data/
 
 RUN sed -i "s|/home/.local/share/signal-cli|/data/data|g" /entrypoint.sh
 

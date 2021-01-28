@@ -1,3 +1,5 @@
+# Release 0.7
+- Update to latest upstream
 # Nextcloud for Home Assistant 0.6
 - Update to latest upstream
 # Nextcloud for Home Assistant 0.5

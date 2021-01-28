@@ -1,3 +1,5 @@
+# Release 0.34
+- Update to latest [upstream](https://github.com/bbernhard/signal-cli-rest-api/releases/tag/0.34) 0.34
 # Release 0.32
 - Update to latest [upstream](https://github.com/bbernhard/signal-cli-rest-api/releases/tag/0.32) 0.32
 - Match versioning of upstream

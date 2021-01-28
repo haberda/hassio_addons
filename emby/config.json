@@ -1,7 +1,7 @@
 {
   "name": "emby",
   "url": "https://github.com/haberda/hassio_addons",
-  "version": "0.7",
+  "version": "0.8",
   "slug": "emby",
   "ingress": false,
   "ingress_port": 8096,

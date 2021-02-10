@@ -14,7 +14,7 @@
   "description": "Emby Media Server",
   "startup": "system",
   "boot": "manual",
-  "auto_uart": true,
+  "uart": true,
   "map": [
     "share:rw",
     "media:rw",

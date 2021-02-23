@@ -39,6 +39,7 @@ chown -R ${htuser}:${htgroup} ${ocpath}/updater/
 chown -R ${htuser}:${htgroup} /share/nextcloud
 chown -R ${htuser}:${htgroup} /ssl/nextcloud/keys
 
+chmod -R 777 /data/config
 chmod +x ${ocpath}/occ
 
 printf "chmod/chown .htaccess\n"

@@ -1,3 +1,5 @@
+# 0.36
+- Fix dependency problem in 0.35
 # Release 0.34 rollback
 - Dependency problems for some users in version 0.35, rolling back to 0.34
 # Release 0.35

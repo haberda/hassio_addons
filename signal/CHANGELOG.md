@@ -1,3 +1,5 @@
+# 0.36.1
+- Fix /data permissions
 # 0.36
 - Fix dependency problem in 0.35
 # Release 0.34 rollback

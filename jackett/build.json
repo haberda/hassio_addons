@@ -1,9 +1,10 @@
 {
     "squash": false,
     "build_from": {
-        "aarch64": "linuxserver/jackett:arm64v8-version-v0.17.197",
-        "amd64": "linuxserver/jackett:amd64-version-v0.17.197",
-        "armv7": "linuxserver/jackett:arm32v7-version-v0.17.197"
+        "aarch64": "linuxserver/jackett:version-v0.17.656",
+        "amd64": "linuxserver/jackett:version-v0.17.656",
+        "armhf": "linuxserver/jackett:version-v0.17.656",
+        "armv7": "linuxserver/jackett:version-v0.17.656"
     },
     "args": {}
 }

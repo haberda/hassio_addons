@@ -1,7 +1,7 @@
 {
   "name": "Sickchill",
   "url": "https://github.com/haberda/hassio_addons",
-  "version": "0.4",
+  "version": "2021.3.7",
   "slug": "sickchill",
   "ingress": false,
   "ingress_port": 8081,

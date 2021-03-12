@@ -1,9 +1,9 @@
 {
     "squash": false,
     "build_from": {
-        "aarch64": "linuxserver/sickchill:arm64v8-version-2020.11.24.post1",
-        "amd64": "linuxserver/sickchill:amd64-version-2020.11.24.post1",
-        "armv7": "linuxserver/sickchill:arm32v7-version-2020.11.24.post1"
+        "aarch64": "linuxserver/sickchill:version-2021.3.7.post2",
+        "amd64": "linuxserver/sickchill:version-2021.3.7.post2",
+        "armv7": "linuxserver/sickchill:version-2021.3.7.post2"
     },
     "args": {}
 }

@@ -1,10 +1,10 @@
 {
     "squash": false,
     "build_from": {
-        "aarch64": "emby/embyserver_arm64v8:4.6.0.21",
-        "amd64": "emby/embyserver:4.6.0.21",
-        "armhf": "emby/embyserver_arm32v7:4.6.0.21",
-        "armv7": "emby/embyserver_arm32v7:4.6.0.21"
+        "aarch64": "emby/embyserver:4.6.0.31",
+        "amd64": "emby/embyserver:4.6.0.31",
+        "armhf": "emby/embyserver:4.6.0.31",
+        "armv7": "emby/embyserver:4.6.0.31"
     },
     "args": {}
 }

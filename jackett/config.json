@@ -1,13 +1,14 @@
 {
   "name": "Jackett",
   "url": "https://github.com/haberda/hassio_addons",
-  "version": "0.4",
+  "version": "0.17.656",
   "slug": "jackett",
   "ingress": false,
   "ingress_port": 9117,
   "arch": [
     "aarch64",
     "amd64",
+    "armhf",
     "armv7"
   ],
   "description": "Jackett for Home Assistant",

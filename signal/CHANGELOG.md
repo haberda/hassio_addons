@@ -1,3 +1,6 @@
+# 0.36.2
+- Remove unnessary mappings
+- Clear /tmp to save space
 # 0.36.1
 - Fix /data permissions
 # 0.36

@@ -1,3 +1,5 @@
+# 0.36.3
+- Move to docker hub
 # 0.36.2
 - Remove unnessary mappings
 - Clear /tmp to save space

@@ -1,7 +1,8 @@
+
 {
   "name": "Signal Messenger",
   "url": "https://github.com/haberda/hassio_addons",
-  "version": "0.36.2",
+  "version": "0.36.3",
   "slug": "signal_messenger",
   "ingress": false,
   "ingress_port": 0,
@@ -20,5 +21,6 @@
   "options": {
   },
   "schema": {
-  }
+  },
+  "image": "eightiesguy/signal-addon"
 }

@@ -1,7 +1,7 @@
 {
   "name": "Signal Messenger",
   "url": "https://github.com/haberda/hassio_addons",
-  "version": "0.36.1",
+  "version": "0.36.2",
   "slug": "signal_messenger",
   "ingress": false,
   "ingress_port": 0,
@@ -13,10 +13,7 @@
   "description": "Signal Messenger for Home Assistant",
   "startup": "system",
   "boot": "manual",
-  "map": [
-    "share:rw",
-    "ssl"
-  ],
+  "map": [],
   "ports": {
     "8080/tcp": 8080
   },

@@ -11,15 +11,15 @@ The advantage of this is the ease of deployment. But there are several important
 
 For this and other maintenance reasons I have started building the image prior to release and hosting them on docker hub.
 
-##What does this mean?
+## What does this mean?
 
 Some users are reporting that the new method will not install cleanly over the previous image. If this is your issue for now you can roll back to an earlier snapshot. Ultimately if this is an issue you will need to remove the add-on and reinstall. The implication here is that you will have to 'start from scratch' and register your number and groups again.
 
 You can get around this a number of ways, all of them coming down to backing up and restoring the data folder that the add-on saves to.
 
-###Before you do anything take a Snapshot
+### Before you do anything take a Snapshot
 
-##Methods for backing up and restoring the data
+## Methods for backing up and restoring the data
 
 If you are on a supervised installation, just navigate to the addons/data folder and copy the folder called: 1315902c_signal_messenger to somewhere safe. Remove the add-on, reinstall, then restore the folder.
 

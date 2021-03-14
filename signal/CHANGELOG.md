@@ -1,4 +1,5 @@
 # 0.36.3
+##Potential breaking change, see README
 - Move to docker hub
 # 0.36.2
 - Remove unnessary mappings

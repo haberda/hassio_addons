@@ -1,7 +1,7 @@
 {
   "name": "Sickchill",
   "url": "https://github.com/haberda/hassio_addons",
-  "version": "2021.3.7",
+  "version": "2021.3.10.1",
   "slug": "sickchill",
   "ingress": false,
   "ingress_port": 8081,
@@ -13,7 +13,6 @@
   "description": "Sickchill for Home Assistant",
   "startup": "system",
   "boot": "manual",
-  "uart": true,
   "map": [
     "share:rw",
     "media:rw",
@@ -27,5 +26,6 @@
     "8081/tcp": 8081
   },
   "webui": "http://[HOST]:[PORT:8081]",
-  "panel_icon": "mdi:coat-rack"
+  "panel_icon": "mdi:coat-rack",
+  "snapshot_exclude": ["*/cache/*", "*/backup/*", "*/Logs/*", "*/cache.db"]
 }

@@ -1,20 +1,24 @@
-ARG BUILD_FROM
+#ARG BUILD_FROM
 
-FROM ${BUILD_FROM}
+#FROM ${BUILD_FROM}
 
-ENV NEXTCLOUD_PATH="/data/config/www/nextcloud"
+FROM eightiesguy/nextcloud-addon:21.0.0
+
+#FROM linuxserver/nextcloud:version-21.0.0
+
+#ENV NEXTCLOUD_PATH="/data/config/www/nextcloud"
 
 # modify/copy files
-RUN sed -i "s|data|share/nextcloud|g" /etc/cont-init.d/*
+#RUN sed -i "s|data|share/nextcloud|g" /etc/cont-init.d/*
 
-RUN sed -i "s|config|data/config|g" /etc/cont-init.d/*
+#RUN sed -i "s|config|data/config|g" /etc/cont-init.d/*
 
-RUN sed -i "s|data|share/nextcloud|g" /etc/services.d/nginx/*
+#RUN sed -i "s|data|share/nextcloud|g" /etc/services.d/nginx/*
 
-RUN sed -i "s|config|data/config|g" /etc/services.d/nginx/*
+#RUN sed -i "s|config|data/config|g" /etc/services.d/nginx/*
 
-COPY root/ /
+#COPY root/ /
 
-RUN ["chmod", "+x", "/defaults/nextcloud-perms.sh"]
+#RUN ["chmod", "+x", "/defaults/nextcloud-perms.sh"]
 
-VOLUME ["/share", "/ssl", "/data", "/media"]
+#VOLUME ["/share", "/ssl", "/data", "/media"]

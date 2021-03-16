@@ -33,7 +33,7 @@ If you have no access to the filesystem (e.g. HassOS):
 6. Shut your system down again, then repeat step 2 and restore the 1315902c_signal_messenger folder
 7. Reboot system, should be good to go
 
-Another method (not tested but probably ok):
+Another method (tested by @LiJu09 and found to be very [easy](https://github.com/haberda/hassio_addons/issues/25).):
 
 1. Take a snapshot of just the Signal add-on without a password
 2. Download to a local computer open the snapshot and find the 'data' folder in the snapshot, copy it somewhere

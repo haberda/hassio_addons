@@ -1,3 +1,6 @@
+# 0.9
+- Update to latest upstream
+- Point to new image host
 # 0.8
 Update to latest upstream
 # Release 0.7

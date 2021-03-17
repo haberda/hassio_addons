@@ -28,5 +28,5 @@
   },
   "webui": "https://[HOST]:[PORT:443]",
   "panel_icon": "mdi:cloud",
-  "snapshot_exclude":["*/nextcloud/log/", "*/config/www/nextcloud/apps/"]
+  "snapshot_exclude":["*/nextcloud/log/"]
 }

@@ -1,6 +1,6 @@
-ARG BUILD_FROM
+#ARG BUILD_FROM
 
-FROM ${BUILD_FROM}
+FROM emby/embyserver:4.6.0.31
 
 RUN sed -i "s|config|data|g" /etc/services.d/emby-server/run
 

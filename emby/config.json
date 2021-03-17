@@ -14,11 +14,9 @@
   "description": "Emby Media Server",
   "startup": "system",
   "boot": "manual",
-  "uart": true,
   "map": [
     "share:rw",
-    "media:rw",
-    "ssl"
+    "media:rw"
   ],
   "ports": {
     "8096/tcp": 8096,
@@ -32,5 +30,6 @@
   },
   "schema": {
   },
-  "webui": "http://[HOST]:[PORT:8096]"
+  "webui": "http://[HOST]:[PORT:8096]",
+  "snapshot_exclude":["*/cache/", "*/logs/", "*/transcoding-temp/", "*/metadata/"]
 }

@@ -1,7 +1,7 @@
 {
   "name": "Nextcloud",
   "url": "https://github.com/haberda/hassio_addons",
-  "version": "0.9",
+  "version": "21.0.0",
   "slug": "nextcloud",
   "ingress": false,
   "ingress_port": 0,
@@ -28,5 +28,6 @@
   },
   "webui": "https://[HOST]:[PORT:443]",
   "panel_icon": "mdi:cloud",
-  "snapshot_exclude":["*/nextcloud/log/"]
+  "snapshot_exclude":["*/nextcloud/log/"],
+  "image": "eightiesguy/nextcloud-addon"
 }

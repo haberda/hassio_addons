@@ -2,7 +2,7 @@
 
 #FROM ${BUILD_FROM}
 
-FROM eightiesguy/headphones-addon
+FROM eightiesguy/headphones-addon:379fd3d0-ls66
 
 # modify/copy files
 

@@ -1,7 +1,7 @@
 {
   "name": "Headphones",
   "url": "https://github.com/haberda/hassio_addons",
-  "version": "379fd3d0-ls65",
+  "version": "379fd3d0-ls65.1",
   "slug": "headphones",
   "ingress": false,
   "ingress_port": 8181,
@@ -13,11 +13,9 @@
   "description": "Headphones for Home Assistant",
   "startup": "system",
   "boot": "manual",
-  "uart": true,
   "map": [
     "share:rw",
-    "media:rw",
-    "ssl"
+    "media:rw"
   ],
   "options":{
   },
@@ -28,5 +26,6 @@
   },
   "webui": "http://[HOST]:[PORT:8181]",
   "panel_icon": "mdi:coat-rack",
-  "host_network": false
+  "host_network": false,
+  "snapshot_exclude": ["*/cache/"]
 }

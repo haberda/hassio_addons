@@ -2,6 +2,8 @@
 
 FROM emby/embyserver_arm32v7:4.6.0.32
 
-RUN sed -i "s|config|data|g" /etc/services.d/emby-server/run
+CMD ["sed", "-i", "s|config|data|g", "/etc/services.d/emby-server/run"]
+
+#RUN sed -i "s|config|data|g" /etc/services.d/emby-server/run
 
 VOLUME ["/share", "/data", "/media"]

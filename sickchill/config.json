@@ -1,7 +1,7 @@
 {
   "name": "Sickchill",
   "url": "https://github.com/haberda/hassio_addons",
-  "version": "2021.3.10.1",
+  "version": "2021.3.10",
   "slug": "sickchill",
   "ingress": false,
   "ingress_port": 8081,
@@ -27,5 +27,6 @@
   },
   "webui": "http://[HOST]:[PORT:8081]",
   "panel_icon": "mdi:coat-rack",
-  "snapshot_exclude": ["*/cache/*", "*/backup/*", "*/Logs/*", "*/cache.db"]
+  "snapshot_exclude": ["*/cache/*", "*/backup/*", "*/Logs/*", "*/cache.db"],
+  "image": "eightiesguy/sickchill-addon"
 }

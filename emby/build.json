@@ -1,10 +1,10 @@
 {
     "squash": false,
     "build_from": {
-        "aarch64": "eightiesguy/emby-addon:4.6.0.31-aarch64",
-        "amd64": "eightiesguy/emby-addon:4.6.0.31-amd64",
-        "armv7": "eightiesguy/emby-addon:4.6.0.31-armv7",
-        "armhf": "eightiesguy/emby-addon:4.6.0.31-armhf"
+        "aarch64": "eightiesguy/emby-addon-aarch64:4.6.0.31",
+        "amd64": "eightiesguy/emby-addon-amd64:4.6.0.31",
+        "armv7": "eightiesguy/emby-addon-armv7:4.6.0.31",
+        "armhf": "eightiesguy/emby-addon-armhf:4.6.0.31"
     },
     "args": {}
 }

@@ -1,7 +1,7 @@
 {
   "name": "Headphones",
   "url": "https://github.com/haberda/hassio_addons",
-  "version": "379fd3d0-ls65.1",
+  "version": "379fd3d0-ls66",
   "slug": "headphones",
   "ingress": false,
   "ingress_port": 8181,
@@ -27,5 +27,6 @@
   "webui": "http://[HOST]:[PORT:8181]",
   "panel_icon": "mdi:coat-rack",
   "host_network": false,
-  "snapshot_exclude": ["*/cache/"]
+  "snapshot_exclude": ["*/cache/"],
+  "image": "eightiesguy/headphones-addon"
 }

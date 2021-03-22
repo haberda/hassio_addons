@@ -1,3 +1,6 @@
+# 0.37
+- Update to latest upstream
+- Enable experimental native mode
 # 0.36.3
 ## Potential breaking change, see README
 - Move to docker hub

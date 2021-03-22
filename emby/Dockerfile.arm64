@@ -1,6 +1,6 @@
 #ARG BUILD_FROM
 
-FROM emby/embyserver_arm64v8:4.6.0.32
+FROM emby/embyserver_arm64v8:4.6.0.34
 
 CMD ["sed", "-i", "s|config|data|g", "/etc/services.d/emby-server/run"]
 

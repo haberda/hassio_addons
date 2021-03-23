@@ -1,6 +1,6 @@
 {
   "name": "Jackett",
-  "url": "https://github.com/haberda/hassio_addons",
+  "url": "https://github.com/haberda/hassio_addons/tree/master/jackett",
   "version": "0.17.728",
   "slug": "jackett",
   "ingress": false,

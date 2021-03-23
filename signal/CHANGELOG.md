@@ -1,3 +1,5 @@
+# 0.37.1
+- Disable native mode due to issues with arm64
 # 0.37
 - Update to latest upstream
 - Enable experimental native mode

@@ -1,6 +1,6 @@
 {
   "name": "Headphones",
-  "url": "https://github.com/haberda/hassio_addons",
+  "url": "https://github.com/haberda/hassio_addons/tree/master/headphones",
   "version": "379fd3d0-ls66",
   "slug": "headphones",
   "ingress": false,

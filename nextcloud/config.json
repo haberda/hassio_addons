@@ -1,6 +1,6 @@
 {
   "name": "Nextcloud",
-  "url": "https://github.com/haberda/hassio_addons",
+  "url": "https://github.com/haberda/hassio_addons/tree/master/nextcloud",
   "version": "21.0.0",
   "slug": "nextcloud",
   "ingress": false,

@@ -1,7 +1,7 @@
 {
   "name": "Signal Messenger",
   "url": "https://github.com/haberda/hassio_addons/tree/master/signal",
-  "version": "0.37.1",
+  "version": "0.37.2",
   "slug": "signal_messenger",
   "ingress": false,
   "ingress_port": 0,
@@ -18,8 +18,10 @@
     "8080/tcp": 8080
   },
   "options": {
+    "native_mode": 0
   },
   "schema": {
+    "native_mode": "int"
   },
   "environment": {
     "SIGNAL_CLI_CONFIG_DIR": "/data"

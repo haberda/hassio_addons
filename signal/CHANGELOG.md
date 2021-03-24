@@ -1,3 +1,6 @@
+# 0.37.2
+- Fixed Supervisor cleanup of old images
+- Added option for Native support (do not use on arm64)
 # 0.37.1
 - Disable native mode due to issues with arm64
 # 0.37

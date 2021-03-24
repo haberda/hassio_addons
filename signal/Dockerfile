@@ -1,15 +1,17 @@
 FROM bbernhard/signal-cli-rest-api:0.37
 
-#ARG SIGNAL_CLI_VERSION=0.8.0
+LABEL io.hass.version="0.37.2" io.hass.type="addon" io.hass.arch="armhf|aarch64|amd64"
 
-#RUN rm -rf /tmp/signal-cli-${SIGNAL_CLI_VERSION}.tar
+COPY options.sh /options.sh
 
-#RUN rm -rf /tmp/*
+RUN apt-get clean \
+
+        && apt-get update \
+
+        && apt-get install -y --no-install-recommends jq
 
 WORKDIR /data/data/
 
-#RUN sed -i "s|/home/.local/share/signal-cli|/data|g" /entrypoint.sh
-
-#CMD ["-signal-cli-config", "/data/"]
+ENTRYPOINT ["/options.sh"]
 
 VOLUME ["/data"]

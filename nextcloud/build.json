@@ -1,9 +1,0 @@
-{
-    "squash": false,
-    "build_from": {
-        "aarch64": "linuxserver/nextcloud:version-21.0.0",
-        "amd64": "linuxserver/nextcloud:version-21.0.0",
-        "armv7": "linuxserver/nextcloud:version-21.0.0"
-    },
-    "args": {}
-}

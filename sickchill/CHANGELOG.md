@@ -1,3 +1,6 @@
+# ls57
+- Update upstream
+- Fix Supervisor cleanup
 # Release 2021.3.10.1
 ## Potential breaking change
 - The image location was changed in 3.10. This release completes the transition to the new location. If you did not install 3.10 before this release you will need to follow the instructions posted [here](https://github.com/haberda/hassio_addons/blob/master/signal/README.md) keeping in mind the folder name will not be the same. It's possible that if you installed 3.10 that you may still have the problem outlined in the README. Be cautious with this update, and only perform it if you have a snapshot of your current install and have time to fix any issues.

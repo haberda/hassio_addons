@@ -1,9 +1,0 @@
-{
-    "squash": false,
-    "build_from": {
-        "aarch64": "linuxserver/sickchill:version-2021.3.7.post2",
-        "amd64": "linuxserver/sickchill:version-2021.3.7.post2",
-        "armv7": "linuxserver/sickchill:version-2021.3.7.post2"
-    },
-    "args": {}
-}

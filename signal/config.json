@@ -21,7 +21,7 @@
     "native_mode": 0
   },
   "schema": {
-    "native_mode": "int"
+    "native_mode": "int(0,1)"
   },
   "environment": {
     "SIGNAL_CLI_CONFIG_DIR": "/data"

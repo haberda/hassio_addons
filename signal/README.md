@@ -13,9 +13,15 @@ For this and other maintenance reasons I have started building the image prior t
 
 ## What does this mean?
 
-Some users are reporting that the new method will not install cleanly over the previous image. If this is your issue for now you can roll back to an earlier snapshot. Ultimately if this is an issue you will need to remove the add-on and reinstall. The implication here is that you will have to 'start from scratch' and register your number and groups again.
+Some users are reporting that the new method will not install cleanly over the previous image. This is primarily because Home Assistant doesn't know how to handle the fact that the image location has changed. If this is your issue for now you can roll back to an earlier snapshot. 
+
+There are two potential paths forward. 
+
+With the first path you will need to remove the add-on and reinstall. The implication here is that you will have to 'start from scratch' and register your number and groups again.
 
 You can get around this a number of ways, all of them coming down to backing up and restoring the data folder that the add-on saves to.
+
+The second path (untested but should work) is forcing Home Assistant to download the latest image so that it is available to install over the previous version.
 
 ### Before you do anything take a Snapshot
 
@@ -46,6 +52,18 @@ Sorry for the pain, but this is good for the long term health of the add-on. No 
 
 This message will remain here for a couple releases, until everyone has updated.
 
+## Forcing the download of the new image
+
+For this method to work you will need the [Portainer](https://github.com/hassio-addons/addon-portainer) add-on installed. 
+
+Once the Portainer add-on is installed and running:
+
+1. Enter the web interface for Portainer
+2. Click `Images` on the left hand menu
+3. In the `Image` text entry box type: `eightiesguy/signal-addon:{VERSION}` where `{VERSION}` is the current version of this Signal Messenger add-on (e.g. `eightiesguy/signal-addon:0.37.2`)
+4. Click the `Pull the Image` button
+5. After the image is successfully pulled, attempt to update the Signal Messenger add-on
+
 # Signal Messenger
 
 Signal-CLI to Rest-API Home Assistant add-on
@@ -68,3 +86,4 @@ If you want to use i.e. REST to receive messages in HA, you can find more detail
 
 
 All credit to [@bbernhard](https://github.com/bbernhard), all I did was take his [work](https://github.com/bbernhard/signal-cli-rest-api) and make an add-on.
+

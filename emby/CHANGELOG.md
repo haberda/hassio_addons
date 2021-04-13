@@ -1,3 +1,6 @@
+# 4.6.0.37
+- Update to 4.6.0.37 upstream
+- Fix arm and arm64 builds
 # Release 4.6.0.34
 - Update to latest upstream
 # Release 4.6.0.31

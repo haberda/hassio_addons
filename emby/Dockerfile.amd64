@@ -1,8 +1,8 @@
 #ARG BUILD_FROM
 
-FROM emby/embyserver:4.6.0.35
+FROM emby/embyserver:4.6.0.37
 
-LABEL io.hass.version="4.6.0.35" io.hass.type="addon" io.hass.arch="armhf|aarch64|amd64"
+LABEL io.hass.version="4.6.0.37" io.hass.type="addon" io.hass.arch="armhf|aarch64|amd64"
 
 RUN sed -i "s|config|data|g" /etc/services.d/emby-server/run
 

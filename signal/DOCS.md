@@ -22,10 +22,19 @@ This option sets an environment variable in the add-on to use a pre-compiled bin
 
 Valid options:
 
-- `0`: Disable Native mode
+- `0`: Disable Native mode (default)
 - `1`: Enable Native mode
 
 This currently only works with a 64 bit OS on amd64. arm64 platforms (e.g. Pi4 with 64bit OS) will fail to send messages when this is enabled, and armv7 (e.g. Pi3 with 32bit OS) platforms will ignore this option.
+
+### Auto receive
+
+This option is recommened by the up-stream project to be enabled if you do not have a rest api endpoint setup to listen for new messages. See documentation [here](https://github.com/bbernhard/signal-cli-rest-api#auto-receive-schedule) for more details.
+
+Valid options:
+
+- `0`: Disable Auto receive
+- `1`: Enable Auto receive (default)
 
 ## Versioning
 

@@ -1,3 +1,5 @@
+# 0.40
+- Updated to upstream 0.40
 # 0.39
 - Updated to latest upstream
 ## Possible breaking change

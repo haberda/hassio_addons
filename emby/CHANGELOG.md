@@ -1,3 +1,5 @@
+# 4.6.2.0
+- Updated to 4.6.2.0 upstream
 # 4.6.0.37
 - Update to 4.6.0.37 upstream
 - Fix arm and arm64 builds

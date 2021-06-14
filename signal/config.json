@@ -28,5 +28,5 @@
   "environment": {
     "SIGNAL_CLI_CONFIG_DIR": "/data"
   },
-  "image": "eightiesguy/signal-addon"
+  "image": "ghcr.io/haberda/signal/{arch}"
 }

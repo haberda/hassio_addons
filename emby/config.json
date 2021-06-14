@@ -1,14 +1,13 @@
 {
   "name": "emby",
   "url": "https://github.com/haberda/hassio_addons/tree/master/emby",
-  "version": "4.6.2.0",
+  "version": "4.6.2.0.4",
   "slug": "emby",
   "ingress": false,
   "ingress_port": 8096,
   "arch": [
     "aarch64",
     "amd64",
-    "armhf",
     "armv7"
   ],
   "description": "Emby Media Server",
@@ -32,5 +31,5 @@
   },
   "webui": "http://[HOST]:[PORT:8096]",
   "snapshot_exclude":["*/cache/", "*/logs/", "*/transcoding-temp/", "*/metadata/"],
-  "image": "eightiesguy/emby-addon-{arch}"
+  "image": "ghcr.io/haberda/emby/{arch}"
 }

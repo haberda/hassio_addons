@@ -17,3 +17,4 @@ jobs:
           addon: ${{ github.event.client_payload.addon }}
           repository: ${{ github.repository }}
           token: ${{ secrets.UPDATER_TOKEN }}
+          force: true

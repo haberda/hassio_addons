@@ -1,0 +1,7 @@
+---
+channel: stable
+addons:
+  signal_messenger:
+    repository: haberda/signal-addon
+    target: signal_messenger
+    image: ghcr.io/haberda/signal_messenger/{arch}

@@ -9,3 +9,7 @@ addons:
     repository: haberda/signal-addon
     target: signal
     image: ghcr.io/haberda/signal_messenger/{arch}
+  jackett:
+    repository: haberda/jackett-addon
+    target: jackett
+    image: ghcr.io/haberda/jackett/{arch}

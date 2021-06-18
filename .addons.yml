@@ -13,3 +13,7 @@ addons:
     repository: haberda/jackett-addon
     target: jackett
     image: ghcr.io/haberda/jackett/{arch}
+  emby:
+    repository: haberda/emby-addon
+    target: emby
+    image: ghcr.io/haberda/emby/{arch}

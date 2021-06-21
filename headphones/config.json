@@ -1,7 +1,7 @@
 {
   "name": "Headphones",
   "url": "https://github.com/haberda/hassio_addons/tree/master/headphones",
-  "version": "ls67",
+  "version": "379fd3d0",
   "slug": "headphones",
   "ingress": false,
   "ingress_port": 8181,

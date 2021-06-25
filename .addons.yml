@@ -17,3 +17,7 @@ addons:
     repository: haberda/emby-addon
     target: emby
     image: ghcr.io/haberda/emby/{arch}
+  transmission:
+    repository: hassio-addon-transmission
+    target: transmission
+    image: ghcr.io/haberda/transmission/{arch}

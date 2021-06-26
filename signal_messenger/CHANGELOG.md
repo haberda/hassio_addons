@@ -1,1 +1,1 @@
-Move images to ghcr.io
+- Update to latest upstream (0.41)

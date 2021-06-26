@@ -2,7 +2,7 @@
 
 # Signal Messenger
 
-Signal-CLI to Rest-API Home Assistant add-on
+Rest-API to Signal-CLI Home Assistant add-on
 
 # How to use this add-on
 

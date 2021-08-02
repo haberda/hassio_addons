@@ -1,7 +1,7 @@
 {
   "name": "Signal Messenger",
   "url": "https://github.com/haberda/signal-addon/tree/master/",
-  "version": "0.41",
+  "version": "0.42.0",
   "slug": "signal_messenger",
   "arch": [
     "aarch64",
@@ -19,11 +19,13 @@
   },
   "options": {
     "native_mode": 0,
-    "AUTO_RECEIVE": 1
+    "AUTO_RECEIVE": 1,
+    "SIGNAL_CLI_CMD_TIMEOUT": 60
   },
   "schema": {
     "native_mode": "int",
-    "AUTO_RECEIVE": "int"
+    "AUTO_RECEIVE": "int",
+    "SIGNAL_CLI_CMD_TIMEOUT": "int"
   },
   "environment": {
     "SIGNAL_CLI_CONFIG_DIR": "/data"

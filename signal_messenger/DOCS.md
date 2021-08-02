@@ -36,6 +36,10 @@ Valid options:
 - `0`: Disable Auto receive
 - `1`: Enable Auto receive (default)
 
+## SIGNAL-CLI Command Timeout
+
+This option sets the time in seconds to wait before timing out the signal cli command. (default: 60s)
+
 ## Versioning
 
 This add-on follows the versioning of the upstream container. There is very little difference between this add-on and the container found [here](https://github.com/bbernhard/signal-cli-rest-api).

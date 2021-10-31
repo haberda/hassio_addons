@@ -1,6 +1,6 @@
 {
   "name": "Jackett",
-  "version": "0.18.329",
+  "version": "0.19.108",
   "slug": "jackett",
   "description": "Jackett for Home Assistant",
   "url": "https://github.com/haberda/jackett-addon",
@@ -50,7 +50,7 @@
   "environment": {
     "LOG_FORMAT": "{LEVEL}: {MESSAGE}"
   },
-  "snapshot_exclude": [
+  "backup_exclude": [
     "*.txt"
   ],
   "image": "ghcr.io/haberda/jackett/{arch}"

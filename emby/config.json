@@ -1,7 +1,7 @@
 {
   "name": "emby",
   "url": "https://github.com/haberda/emby-addon",
-  "version": "4.6.4",
+  "version": "4.6.5",
   "slug": "emby",
   "arch": [
     "aarch64",
@@ -13,7 +13,8 @@
   "boot": "manual",
   "map": [
     "share:rw",
-    "media:rw"
+    "media:rw",
+    "ssl:rw"
   ],
   "devices": [
     "/dev/dri",
@@ -39,7 +40,7 @@
     "1900/udp": "1900"
   },
   "webui": "http://[HOST]:[PORT:8096]",
-  "snapshot_exclude": [
+  "backup_exclude": [
     "*/cache/",
     "*/logs/",
     "*/transcoding-temp/",

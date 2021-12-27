@@ -20,6 +20,7 @@ https://www.home-assistant.io/integrations/signal_messenger/
 
 If you want to use i.e. REST to receive messages in HA, you can find more details [here](https://bbernhard.github.io/signal-cli-rest-api/)
 
+To add a desktop application see this (not tested by me): https://github.com/haberda/signal-addon/issues/12
 
 All credit to [@bbernhard](https://github.com/bbernhard), all I did was take his [work](https://github.com/bbernhard/signal-cli-rest-api) and make an add-on.
 

@@ -1,3 +1,5 @@
-- Update to latest upstream container 0.42
-- Add ability to set SIGNAL_CLI_CMD_TIMEOUT variable
-See [this ](https://github.com/bbernhard/signal-cli-rest-api/releases/tag/0.42) for more
+# Enhancements
+- Support for upstream json-rcp mode (see docs)
+- Add option to delete add-on data to start fresh
+# Breaking Changes
+- The options for this add-on have been changed. This was unavoidable to match upstream changes. Please review the docs for the add-on to understand the changes.

@@ -16,29 +16,32 @@ Instructions for use can be found in the official [docs](https://www.home-assist
 
 ## Options
 
-### Use Native: `native_mode`
+### Mode
 
-This option sets an environment variable in the add-on to use a pre-compiled binary to send messages rather than using the Java application. This reduces the send time from ~15 seconds to ~5 seconds. More information can be found [here](https://github.com/bbernhard/signal-cli-rest-api#native-image-experimental).
+This option allows you to set the MODE environment variable. This replaces the Use Native variable and adds an additional mode.
 
 Valid options:
 
-- `0`: Disable Native mode (default)
-- `1`: Enable Native mode
-
-This currently only works with a 64 bit OS on amd64. arm64 platforms (e.g. Pi4 with 64bit OS) will fail to send messages when this is enabled, and armv7 (e.g. Pi3 with 32bit OS) platforms will ignore this option.
+- 'normal': Every REST API request invokes the signal-cli JAVA application (slowest mode)
+- 'native': Every REST API request invokes a compiled native image (faster than the normal mode)
+- 'json-rpc': The signal-cli JAVA application is started once and the REST API wrapper communicates via JSON-RPC with it (slow startup time, but once the Java application is running, it should be the fastest)
 
 ### Auto receive
 
-This option is recommened by the up-stream project to be enabled if you do not have a rest api endpoint setup to listen for new messages. See documentation [here](https://github.com/bbernhard/signal-cli-rest-api#auto-receive-schedule) for more details.
+This option is recommened by the up-stream project to be enabled if you do not have a rest api endpoint setup to listen for new messages. See documentation [here](https://github.com/bbernhard/signal-cli-rest-api#auto-receive-schedule) for more details. This option does not apply to json-rpc mode and will be ignored in that mode.
 
 Valid options:
 
-- `0`: Disable Auto receive
-- `1`: Enable Auto receive (default)
+- `off`: Disable Auto receive
+- `on`: Enable Auto receive (default)
 
-## SIGNAL-CLI Command Timeout
+### SIGNAL-CLI Command Timeout
 
-This option sets the time in seconds to wait before timing out the signal cli command. (default: 60s)
+This option sets the time in seconds to wait before timing out the signal cli command. This option does not apply to json-rpc mode and will be ignored in that mode.(default: 60s)
+
+### Reset data
+
+This option deletes all data and resets the add-on. Be aware all your settings will be destroyed.
 
 ## Versioning
 

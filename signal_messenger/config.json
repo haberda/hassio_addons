@@ -1,7 +1,7 @@
 {
   "name": "Signal Messenger",
   "url": "https://github.com/haberda/signal-addon/tree/master/",
-  "version": "0.54.0",
+  "version": "0.54.1",
   "slug": "signal_messenger",
   "arch": [
     "aarch64",
@@ -18,12 +18,12 @@
     "8080/tcp": "Rest-api port"
   },
   "options": {
-    "mode": "list(normal|native|json-rcp)",
+    "mode": "list(normal|native|json-rpc)",
     "AUTO_RECEIVE": "true",
     "SIGNAL_CLI_CMD_TIMEOUT": 60
   },
   "schema": {
-    "mode": "list(normal|native|json-rcp)",
+    "mode": "list(normal|native|json-rpc)",
     "AUTO_RECEIVE": "bool",
     "SIGNAL_CLI_CMD_TIMEOUT": "int",
     "reset_data": "bool?"

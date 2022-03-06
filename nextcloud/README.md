@@ -13,20 +13,26 @@ After the add-on is started proceed to: https://[ip]:[port] and follow the setup
 # How to add trusted domain
 Nextcloud requires a whitelist of trusted domains in order to access Nextcloud externally, or even internally from an address that is different from the domain it is initially assessed from. Normally this requires editing of a config file. If you have access to the add-on data storage (i.e. Supervised Installation) then the recommended method is to follow official documentation to add your domain. 
 
-If you are running HASSOS and have no access to edit this file you can add your domain from the web interface through a console app that allows access to the 'occ' command line.
+If you are running HASSOS and have no access to edit this file you can add your domain from the add-on [SSH & Web Terminal](https://github.com/hassio-addons/addon-ssh) via the command line. To do this, you must turn off the 'Protection Mode' of the SSH & Web Terminal add-on.
 
-To do this, log into the Nextcloud web interface as an admin user, click the top right user image icon to expand the menu. Select the Apps to go to the app installation page. On the app installation page install an app called 'OCC Web'.
+Launch both the Nextcloud and SSH & Web Terminal add-ons. Enter the web interface of the SSH & Web Terminal add-on. Once there, type:
 
-Once installed return to the main page and launch OCCWeb.
+> docker ps | grep nextcloud
 
-When the console is displayed type:
+If you see something like this:
 
-> config:system:get trusted_domains
+> 1881ce17ba8c   ghcr.io/haberda/nextcloud/amd64:d4973ba                       "/init"                  13 days ago     Up 13 days             80/tcp, 0.0.0.0:8099->443/tcp, :::8099->443/tcp                                                                                                                                                                                                                            addon_1315902c_nextcloud
 
-Warning: overwriting the domain you are currently using will make Nextcloud inaccessible and the add-on will have to be deleted and reinstalled. This will list the current trusted domains. The domains are numbered from 0 so if you have two domains that display the first is domain 0, the second is domain 1. To add another domain:
+To enter the add-on console enter:
 
-> config:system:set trusted_domains 2 --value=my.domain.com
+> docker exec -it addon_1315902c_nextcloud bash
 
-Where the number 2 is the now new third domain position in the config file, and 'my.domain.com' is your domain. Type the first command again to see whether the new domain has indeed been added. If it has, you are done!
+This should put you in the root of the add-on. config.php is located here:
+
+> /data/config/www/nextcloud/config
+
+Once you navagate there just follow the [docs](https://help.nextcloud.com/t/howto-add-a-new-trusted-domain/26). You can use the nano file editor:
+
+> nano config.php
 
 Based on the [linuxserver](https://hub.docker.com/r/linuxserver/nextcloud) image

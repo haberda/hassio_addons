@@ -1,7 +1,7 @@
 {
   "name": "Nextcloud for Home Assistant",
   "url": "https://github.com/haberda/hassio_addons/tree/master/nextcloud",
-  "version": "24.0.3",
+  "version": "24.0.4",
   "slug": "nextcloud",
   "arch": [
     "aarch64",
@@ -23,6 +23,9 @@
   "ports_description": {
     "443/tcp": "https port",
     "80/tcp": "http port"
+  },
+  "environment": {
+    "NEXTCLOUD_PATH": "/data/config"
   },
   "webui": "https://[HOST]:[PORT:443]",
   "panel_icon": "mdi:cloud",

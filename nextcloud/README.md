@@ -35,4 +35,8 @@ Once you navagate there just follow the [docs](https://help.nextcloud.com/t/howt
 
 > nano config.php
 
+# Data directory
+
+The default location for user data is set to `/data`. This is fine, but will make backups of the add-on very large with time. I recommend on initial install changing it to `/share/nextcloud` so that your user data can live somewhere different that the Nextcloud install. Once the two are fused, they can be difficult to disentangle.
+
 Based on the [linuxserver](https://hub.docker.com/r/linuxserver/nextcloud) image

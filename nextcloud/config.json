@@ -24,9 +24,6 @@
     "443/tcp": "https port",
     "80/tcp": "http port"
   },
-  "environment": {
-    "NEXTCLOUD_PATH": "/data/config"
-  },
   "webui": "https://[HOST]:[PORT:443]",
   "panel_icon": "mdi:cloud",
   "backup_exclude": [

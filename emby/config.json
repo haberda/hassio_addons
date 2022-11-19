@@ -1,7 +1,7 @@
 {
   "name": "emby",
   "url": "https://github.com/haberda/emby-addon",
-  "version": "4.7.6",
+  "version": "4.7.9",
   "slug": "emby",
   "privileged": [
     "SYS_ADMIN",
@@ -65,5 +65,6 @@
     "*/transcoding-temp/",
     "*/metadata/"
   ],
+  "init": false,
   "image": "ghcr.io/haberda/emby/{arch}"
 }

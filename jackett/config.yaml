@@ -1,0 +1,46 @@
+name: Jackett
+version: 0.20.3968
+slug: jackett
+description: Jackett for Home Assistant
+url: https://github.com/haberda/jackett-addon
+startup: services
+webui: http://[HOST]:[PORT:9117]
+panel_icon: mdi:coat-rack
+arch:
+- armv7
+- aarch64
+- amd64
+map:
+- config:rw
+- media:rw
+- share:rw
+- ssl
+ports:
+  9117/tcp: 9117
+ports_description:
+  9117/tcp: Web UI port
+privileged:
+- NET_ADMIN
+devices:
+- /dev/net/tun
+hassio_api: true
+options:
+  log_level: info
+  local_network: 192.168.1.0/24
+  openvpn_enabled: false
+  openvpn_config: null
+  openvpn_username: null
+  openvpn_password: null
+schema:
+  log_level: match(^(trace|debug|info|notice|warning|error|fatal)$)
+  local_network: str
+  openvpn_enabled: bool
+  openvpn_config: str
+  openvpn_username: str
+  openvpn_password: str
+environment:
+  LOG_FORMAT: '{LEVEL}: {MESSAGE}'
+backup_exclude:
+- '*.txt'
+init: false
+image: ghcr.io/haberda/jackett/{arch}

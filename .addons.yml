@@ -1,23 +1,11 @@
 ---
 channel: stable
 addons:
-  nextcloud:
-    repository: haberda/nextcloud-addon
-    target: nextcloud
-    image: ghcr.io/haberda/nextcloud/{arch}
   signal_messenger:
-    repository: haberda/signal-addon
+    repository: TheBlackMini/signal-addon
     target: signal
     image: ghcr.io/haberda/signal_messenger/{arch}
   jackett:
-    repository: haberda/jackett-addon
+    repository: TheBlackMini/jackett-addon
     target: jackett
     image: ghcr.io/haberda/jackett/{arch}
-  emby:
-    repository: haberda/emby-addon
-    target: emby
-    image: ghcr.io/haberda/emby/{arch}
-  transmission:
-    repository: haberda/hassio-addon-transmission
-    target: transmission
-    image: ghcr.io/haberda/transmission/{arch}

@@ -1,8 +1,24 @@
 # hassio_addons
-hopefully useful hassio addons
 
-## Note
-I have an x86 Debian machine. All testing is done on this machine. If you run a differet architecture and have issues, please report them but be prepared to help test.
+Useful hassio addons
 
-## Update
-I no longer personally use HAOS. I will try and keep these updated, but if it breaks significaly I may not be able to debug and repair.
+## Signal REST API container
+
+For more information check out: https://github.com/bbernhard/signal-cli-rest-api
+
+## Jackett
+
+For more information check out: https://github.com/Jackett/Jackett
+
+## Credits
+
+Thanks goes to:
+
+haberda for creating the original HACS repo
+Original repo: https://github.com/haberda/hassio_addons
+
+bbernhard for creating the Signal CLI REST API
+https://github.com/bbernhard/signal-cli-rest-api
+
+The Jackett team
+https://github.com/Jackett/Jackett

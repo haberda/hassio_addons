@@ -1,5 +1,5 @@
 name: Signal Messenger
-url: https://github.com/haberda/signal-addon/tree/master/
+url: https://github.com/TheBlackMini/signal-addon/tree/master/
 version: 0.67.1
 slug: signal_messenger
 arch:
@@ -24,4 +24,4 @@ schema:
   reset_data: bool?
 environment:
   SIGNAL_CLI_CONFIG_DIR: /data
-image: ghcr.io/haberda/signal_messenger/{arch}
+image: ghcr.io/TheBlackMini/signal_messenger/{arch}

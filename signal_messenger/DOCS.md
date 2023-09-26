@@ -55,7 +55,7 @@ There is also a script that runs to allow for setting the above option(s).
 
 ## Bug Reporting
 
-Bug reports can be filed either with the [add-on repository](https://github.com/haberda/hassio_addons), or with the [upstream repository](https://github.com/bbernhard/signal-cli-rest-api). 
+Bug reports can be filed either with the [add-on repository](https://github.com/TheBlackMini/hassio_addons), or with the [upstream repository](https://github.com/bbernhard/signal-cli-rest-api). 
 Please attempt to determine if your bug is related to add-on specific issues, or application issues before filing your report. Add-on specific issues should be submitted to the add-on repository, application specific issues should be filed with the upstream repository.
 
 

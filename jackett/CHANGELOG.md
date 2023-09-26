@@ -1,4 +1,5 @@
 ## What's Changed
+* Converted to own fork
 * Bump frenck/action-addon-linter from 2.11.0 to 2.12.0 by @dependabot in https://github.com/haberda/jackett-addon/pull/81
 * Bump docker/setup-buildx-action from 2.5.0 to 2.6.0 by @dependabot in https://github.com/haberda/jackett-addon/pull/85
 * Bump docker/login-action from 2.1.0 to 2.2.0 by @dependabot in https://github.com/haberda/jackett-addon/pull/84

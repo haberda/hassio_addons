@@ -2,7 +2,7 @@ name: Jackett
 version: 0.21.551
 slug: jackett
 description: Jackett for Home Assistant
-url: https://github.com/haberda/jackett-addon
+url: https://github.com/TheBlackMini/jackett-addon
 startup: services
 webui: http://[HOST]:[PORT:9117]
 panel_icon: mdi:coat-rack
@@ -43,4 +43,4 @@ environment:
 backup_exclude:
 - '*.txt'
 init: false
-image: ghcr.io/haberda/jackett/{arch}
+image: ghcr.io/TheBlackMini/jackett/{arch}

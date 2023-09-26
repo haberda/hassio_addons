@@ -7,7 +7,7 @@ The torrent proxy for Hass.io with OpenVPN support.
 The installation of this add-on is pretty straightforward and not different in
 comparison to installing any other Hass.io add-on.
 
-1. Add https://github.com/haberda/hassio_addons to your Hass.io instance as a repository.
+1. Add https://github.com/TheBlackMini/hassio_addons to your Hass.io instance as a repository.
 1. Install the "Jackett" add-on.
 1. Start the "Jackett" add-on.
 1. Check the logs of the "Jackett" to see if everything went well.

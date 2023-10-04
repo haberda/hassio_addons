@@ -1,1 +1,1 @@
-Hopefully fixes 404 registration error
+Update to upstream 0.69

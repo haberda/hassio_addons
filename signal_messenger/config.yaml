@@ -1,14 +1,13 @@
 name: Signal Messenger
 url: https://github.com/haberda/signal-addon/tree/master/
-version: 0.80.0
+version: 0.81.0
 slug: signal_messenger
 arch:
 - aarch64
 - amd64
 - armv7
-description: Signal Messenger for Home Assistant
-startup: system
-boot: manual
+description: Signal Messenger Home Assistant Addon
+startup: services
 ports:
   8080/tcp: 8080
 ports_description:
@@ -17,11 +16,12 @@ options:
   mode: list(normal|native|json-rpc)
   AUTO_RECEIVE: true
   SIGNAL_CLI_CMD_TIMEOUT: 60
+map:
+- addon_config:rw
 schema:
   mode: list(normal|native|json-rpc)
   AUTO_RECEIVE: bool
   SIGNAL_CLI_CMD_TIMEOUT: int
-  reset_data: bool?
 environment:
-  SIGNAL_CLI_CONFIG_DIR: /data
+  SIGNAL_CLI_CONFIG_DIR: /config
 image: ghcr.io/haberda/signal_messenger/{arch}

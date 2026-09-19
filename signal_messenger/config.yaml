@@ -1,11 +1,10 @@
 name: Signal Messenger
 url: https://github.com/haberda/signal-addon
-version: 0.100.1
+version: 0.100.2
 slug: signal_messenger
 arch:
 - aarch64
 - amd64
-- armv7
 description: Signal Messenger Home Assistant Addon
 startup: services
 ports:
@@ -13,15 +12,29 @@ ports:
 ports_description:
   8080/tcp: Rest-api port
 options:
-  mode: list(normal|native|json-rpc)
+  mode: normal
   AUTO_RECEIVE: true
   SIGNAL_CLI_CMD_TIMEOUT: 60
+  DEFAULT_SIGNAL_TEXT_MODE: normal
+  LOG_LEVEL: info
+  JSON_RPC_TRUST_NEW_IDENTITIES: on-first-use
+  JSON_RPC_IGNORE_ATTACHMENTS: false
+  JSON_RPC_IGNORE_STORIES: false
+  JSON_RPC_IGNORE_AVATARS: false
+  JSON_RPC_IGNORE_STICKERS: false
 map:
-- addon_config:rw
+- app_config:rw
 schema:
-  mode: list(normal|native|json-rpc)
+  mode: list(normal|native|json-rpc|json-rpc-native)
   AUTO_RECEIVE: bool
   SIGNAL_CLI_CMD_TIMEOUT: int
+  DEFAULT_SIGNAL_TEXT_MODE: list(normal|styled)
+  LOG_LEVEL: list(debug|info|warn|error)
+  JSON_RPC_TRUST_NEW_IDENTITIES: list(on-first-use|always|never)
+  JSON_RPC_IGNORE_ATTACHMENTS: bool
+  JSON_RPC_IGNORE_STORIES: bool
+  JSON_RPC_IGNORE_AVATARS: bool
+  JSON_RPC_IGNORE_STICKERS: bool
 environment:
   SIGNAL_CLI_CONFIG_DIR: /config
 image: ghcr.io/haberda/signal_messenger/{arch}

@@ -1,25 +1,23 @@
-[![](logo.png)](https://www.signal.org/)
+[![Signal logo](logo.png)](https://www.signal.org/)
 
 # Signal Messenger
 
-Rest-API to Signal-CLI Home Assistant add-on
+Send and receive Signal messages with Home Assistant using this add-on, which packages [Signal CLI REST API](https://github.com/bbernhard/signal-cli-rest-api).
 
-# How to use this add-on
+## Quick start
 
-Install the add-on, choose your desired port, start.
+1. Add the [production repository](https://github.com/haberda/hassio_addons) to the Home Assistant app/add-on store and install **Signal Messenger**.
+2. Choose your options and start the add-on. For continuous receiving, we recommend `json-rpc`; `json-rpc-native` is the native alternative.
+3. Install the companion [Signal Messenger REST integration](https://github.com/haberda/signal-integration), then select the running add-on and link or select your Signal account.
 
-After the add-on is started follow the directions at the link below starting from "Register phone number"
+The companion integration provides UI-based setup, notification entities, incoming-message automation events, reactions, alert acknowledgements, and optional Assist conversations. See the [setup and configuration guide](DOCS.md) for installation details and receiving permissions.
 
-https://github.com/bbernhard/signal-cli-rest-api/blob/master/doc/HOMEASSISTANT.md
+If you enable integration receiving in `normal` or `native` mode, disable the add-on's `AUTO_RECEIVE` option to avoid competing receivers.
 
-Then proceed here:
+## Documentation and security
 
-https://www.home-assistant.io/integrations/signal_messenger/
+Read [DOCS.md](DOCS.md) for configuration, networking, troubleshooting, and security guidance. The REST API has no built-in authentication: keep it on a trusted network and do not expose its port to the internet.
 
-# API details
+For direct API usage, see the [upstream API reference](https://bbernhard.github.io/signal-cli-rest-api/). Home Assistant's [built-in Signal Messenger integration](https://www.home-assistant.io/integrations/signal_messenger/) remains an alternative for sending notifications.
 
-If you want to use i.e. REST to receive messages in HA, you can find more details [here](https://bbernhard.github.io/signal-cli-rest-api/)
-
-It is highly suggested that you use the machine IP address, rather than the loopback address mentioned in the upstream container documentation to register numbers. In HAOS everything is containerized and loopback addresses stay inside the respective containers.
-
-All credit to [@bbernhard](https://github.com/bbernhard), all I did was take his [work](https://github.com/bbernhard/signal-cli-rest-api) and make an add-on.
+The upstream REST API is developed by [bbernhard and contributors](https://github.com/bbernhard/signal-cli-rest-api); this project packages it for Home Assistant.

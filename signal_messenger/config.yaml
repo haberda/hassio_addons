@@ -1,18 +1,21 @@
 name: Signal Messenger
 url: https://github.com/haberda/signal-addon
-version: 0.100.2
+version: 0.100.3
 slug: signal_messenger
 arch:
 - aarch64
 - amd64
 description: Signal Messenger Home Assistant Addon
 startup: services
+ingress: true
+panel_icon: mdi:message-lock
 ports:
   8080/tcp: 8080
 ports_description:
   8080/tcp: Rest-api port
 options:
   mode: normal
+  WEBUI_ENABLED: true
   AUTO_RECEIVE: true
   SIGNAL_CLI_CMD_TIMEOUT: 60
   DEFAULT_SIGNAL_TEXT_MODE: normal
@@ -26,6 +29,7 @@ map:
 - app_config:rw
 schema:
   mode: list(normal|native|json-rpc|json-rpc-native)
+  WEBUI_ENABLED: bool
   AUTO_RECEIVE: bool
   SIGNAL_CLI_CMD_TIMEOUT: int
   DEFAULT_SIGNAL_TEXT_MODE: list(normal|styled)

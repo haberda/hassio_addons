@@ -9,6 +9,35 @@ This add-on provides the Signal REST API backend for sending and receiving messa
 3. Choose your port and options. For continuous receiving, we recommend `json-rpc`; `json-rpc-native` is the native alternative.
 4. Start the add-on before configuring the integration.
 
+## Management web interface
+
+Select **Open Web UI** on the add-on's page in Home Assistant. The interface is served only through Home Assistant ingress: port 8099 is not published, and the UI accepts connections only from the ingress gateway. No separate UI password, browser extension, or external website is required. Dark mode is the default; the theme switch supports light mode and saves only that preference in your browser.
+
+The `WEBUI_ENABLED` option controls whether the management interface starts. It defaults to `true`. Set it to `false` if you do not want the web UI; the Signal REST API continues to run for other clients, but **Open Web UI** will be unavailable after the add-on restarts.
+
+### Onboarding and daily use
+
+1. Open **Link an account**, name the linked device, and confirm generation of a QR code. On your phone, use Signal → Settings → Linked devices to scan and approve it. The QR is generated locally, never by an external service.
+2. Select **I scanned it — refresh accounts** after approval, then select the account in the header. The QR display expires after five minutes; refreshing accounts does not start another linking handshake. Leaving the page hides the QR but cannot cancel a handshake already started upstream.
+3. Open **Test messages** and enter one explicit destination. To send to yourself, use the selected account's number. You can send text, one attachment up to 2 MiB, quoted replies, or edits to a known sent-message timestamp. A successful API response is not proof of delivery or reading.
+4. Open **Groups** to create a group or select an existing one. Review members, administrators, pending invitations/requests, and the invite link. Update the name, description, avatar, message timer, link policy, or permissions; add/remove members and administrators; accept your own pending invitation; or leave/block the group. Refresh after mutations to see the current state. Leaving does not delete the group for everyone.
+5. Use **Contacts**, **Account & devices**, and **Identity & security** for contact names/timers, profiles, phone-number privacy, usernames, linked devices, registration PINs, verified safety numbers, and rate-limit challenges. Primary-account operations may be unavailable when the backend is linked to a phone.
+
+Advanced onboarding supports SMS/voice registration with optional CAPTCHA and PIN handling. Registration is not the same as linking a phone: it makes the backend a primary device and may replace an existing registration. CAPTCHA must be completed externally; paste the resulting token into the form. Message tools also support reactions, remote deletion, and creating/closing polls.
+
+Every mutation requires review and confirmation. Failed or timed-out requests are never automatically retried because the operation may already have succeeded. Check Signal or refresh backend state before repeating one. Sensitive values and messages are not saved in browser storage or UI request logs. Upstream logging is separate; avoid debug logging when handling sensitive data.
+
+### Scope and upstream limitations
+
+The UI manages Signal state through `http://127.0.0.1:8080`; it does not launch another `signal-cli` process, edit Home Assistant integration settings, or change add-on configuration. The existing REST API port remains separate for integration clients and is not protected by ingress authentication. The UI does not poll or subscribe to incoming messages, so it cannot consume messages intended for the integration.
+
+- Profile updates in upstream 0.100 remove the existing avatar if no image is supplied. The UI requires either an avatar upload or explicit approval to remove it.
+- Upstream 0.100 omits a zero group-expiration value from its JSON-RPC update payload. The UI blocks that ambiguous operation in JSON-RPC modes: disable the timer using your phone or temporarily use normal/native mode instead.
+- Current values for some settings are not available from the REST API. Optional fields left blank preserve upstream settings rather than assuming defaults.
+- CLI-only operations such as phone-number changes, arbitrary group invite-link joining, group ban/unban and link reset, device renaming, and contact block/unblock are not exposed. A second CLI process could contend with the running backend's account storage. Prefer your Signal client until upstream REST support exists.
+- Account deletion, local-data deletion, and blanket identity trust are deliberately not exposed.
+- This is an administrative surface: anyone who can open its ingress page can manage the backend's Signal accounts. Do not treat the integration's sender allowlists as web UI access control.
+
 ## Home Assistant integration
 
 The companion integration is a custom integration, separate from Home Assistant's built-in Signal Messenger integration.
@@ -43,6 +72,10 @@ Receiving does not provide a durable inbox or guaranteed replay after disconnect
 - For integration diagnostics and Assist troubleshooting, see the [integration documentation](https://github.com/haberda/signal-integration#receiving-troubleshooting).
 
 For sending notifications without the companion integration, follow the [built-in Signal Messenger integration documentation](https://www.home-assistant.io/integrations/signal_messenger/). For direct REST access, use the [upstream API reference](https://bbernhard.github.io/signal-cli-rest-api/).
+
+## AI assistance
+
+AI was used to maintain and improve this existing add-on. The management web interface and its supporting implementation were generated entirely with AI assistance.
 
 ## Security
 

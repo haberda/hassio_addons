@@ -15,6 +15,8 @@ Select **Open Web UI** on the add-on's page in Home Assistant. The interface is 
 
 The `WEBUI_ENABLED` option controls whether the management interface starts. It defaults to `true`. Set it to `false` if you do not want the web UI; the Signal REST API continues to run for other clients, but **Open Web UI** will be unavailable after the add-on restarts.
 
+The rootless runtime reads Supervisor's protected `/data/options.json` during s6 initialization. The API, JSON-RPC helper, and web UI then run as the upstream `signal-api` UID/GID 1000, with persisted Signal state stored in `/config`.
+
 ### Onboarding and daily use
 
 1. Open **Link an account**, name the linked device, and confirm generation of a QR code. On your phone, use Signal → Settings → Linked devices to scan and approve it. The QR is generated locally, never by an external service.
@@ -31,8 +33,8 @@ Every mutation requires review and confirmation. Failed or timed-out requests ar
 
 The UI manages Signal state through `http://127.0.0.1:8080`; it does not launch another `signal-cli` process, edit Home Assistant integration settings, or change add-on configuration. The existing REST API port remains separate for integration clients and is not protected by ingress authentication. The UI does not poll or subscribe to incoming messages, so it cannot consume messages intended for the integration.
 
-- Profile updates in upstream 0.100 remove the existing avatar if no image is supplied. The UI requires either an avatar upload or explicit approval to remove it.
-- Upstream 0.100 omits a zero group-expiration value from its JSON-RPC update payload. The UI blocks that ambiguous operation in JSON-RPC modes: disable the timer using your phone or temporarily use normal/native mode instead.
+- Profile updates in upstream 0.101 remove the existing avatar if no image is supplied. The UI requires either an avatar upload or explicit approval to remove it.
+- Upstream 0.101 omits a zero group-expiration value from its JSON-RPC update payload. The UI blocks that ambiguous operation in JSON-RPC modes: disable the timer using your phone or temporarily use normal/native mode instead.
 - Current values for some settings are not available from the REST API. Optional fields left blank preserve upstream settings rather than assuming defaults.
 - CLI-only operations such as phone-number changes, arbitrary group invite-link joining, group ban/unban and link reset, device renaming, and contact block/unblock are not exposed. A second CLI process could contend with the running backend's account storage. Prefer your Signal client until upstream REST support exists.
 - Account deletion, local-data deletion, and blanket identity trust are deliberately not exposed.
